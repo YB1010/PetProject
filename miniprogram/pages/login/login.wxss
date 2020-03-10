@@ -1,0 +1,9 @@
+/* pages/login/login.wxss */
+
+.show{
+  display: block;
+}
+
+.hide{
+  display: none;
+}

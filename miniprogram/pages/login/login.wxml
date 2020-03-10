@@ -1,0 +1,38 @@
+<!--  button（临时，用于点击按钮进行授权） -->
+
+  <button wx:if="{{showButton}}" open-type="getUserInfo" bindgetuserinfo="bindgetuserinfo" block>请登录（点击）</button>
+
+ <!--  用于展示用户信息 （另外种方法是借助open data直接显示昵称，图标和性别）-->
+<view class="{{showView?'show':'hide'}}">
+ <image src='{{ avatarUrl }}' bindtap='showImg' style='width:{{750/size-16}}rpx;height:{{750/size-16}}rpx;' ></image>
+ <view class='username'>
+  <text>Hello </text>
+  <text>{{ nickName }}</text>
+ </view>
+  <text class='moto'> 开启小程序之旅</text>
+</view>
+
+<!--  方法二的注册登录UI，已废弃
+<van-cell-group>
+  <van-field
+    value="{{ username }}"
+    required
+    clearable
+    label="用户名"
+    placeholder="请输入用户名"
+    bind:change="inputusrname"
+  />
+
+  <van-field
+    value="{{ password }}"
+    type="password"
+    label="密码"
+    placeholder="请输入密码"
+    required
+    border="{{ false }}"
+    bind:change="inputpassword"
+  />
+</van-cell-group>
+
+<van-button type="default" bindtap="loginVerification" block>登录</van-button>
+<van-button type="default" bindtap="goToRegister" block>注册</van-button> -->

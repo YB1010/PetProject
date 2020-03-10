@@ -1,0 +1,22 @@
+<van-cell-group>
+  <van-field
+    value="{{ username }}"
+    required
+    clearable
+    label="用户名"
+    placeholder="请输入用户名"
+    bind:change="inputusrname"
+  />
+
+  <van-field
+    value="{{ password }}"
+    type="password"
+    label="密码"
+    placeholder="请输入密码"
+    required
+    border="{{ false }}"
+    bind:change="inputpassword"
+  />
+</van-cell-group>
+
+<van-button type="default" bindtap="register" block>注册</van-button>
